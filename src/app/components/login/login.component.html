@@ -1,0 +1,41 @@
+<div class="container mT mL">
+    <form [formGroup]="login" (ngSubmit)="loginProcess()">
+        <h2> LOGIN  </h2>
+        <p> Welcome to the website </p>
+        <hr>
+        <!-- USER -->
+        <div class="form-group">
+            <input type="email" class="form-control" placeholder="Email" formControlName="username"
+            [class.is-invalid]="validationError('username')"> 
+            <ng-container>
+                <small *ngIf="controlError('username', 'required')" class="form-text text-danger"> Email address is required. </small>
+                <small *ngIf="controlError('username', 'pattern')" class="form-text text-warning"> Please provide a valid email.  </small>
+            </ng-container>
+        </div>
+    
+        <!-- PASSWORD -->
+        <div class="form-group">
+            <input type="password" class="form-control" placeholder="Password" formControlName="password"
+            [class.is-invalid]="validationError('password')">
+            <ng-container>
+                <small *ngIf="controlError('password', 'required')" class="form-text text-danger"> Password is required. </small>
+                <small *ngIf="controlError('password', 'minlength')" class="form-text text-warning"> Ups. Your password can't be less than 4 characters. </small>
+                <small *ngIf="controlError('password', 'maxlength')" class="form-text text-info"> Hey! Your password can't be more than 10 characters. </small>
+            </ng-container>
+        </div>
+        <div class="row">
+            <div class="col">
+                <a [routerLink]="['/register']"> Register </a>
+            </div>
+            <div class="col d-flex justify-content-end">
+                <a [routerLink]="['/recoverPassword']"> Recover Password </a>
+            </div>
+        </div>
+    
+        <div class="d-grid gap-2">
+        <!-- BUTTON -->
+            <button type="submit" class="btn btn-info" [disabled]="login.invalid"> Log In </button>
+        </div>
+    
+    </form>
+</div>

@@ -1,0 +1,70 @@
+.container{
+ margin: 0;
+ padding: 0;
+
+ width: 45rem;
+ height: 30rem;
+
+ background-image: url('https://image.freepik.com/vector-gratis/fondo-flores-tropicales-zoom_23-2148590757.jpg');
+ background-size: cover;
+
+ border-radius: 1rem;
+ box-shadow: 8px 7px 29px 14px #B2B2B2;
+}
+form{
+    background-color: white;
+    border-radius: 1rem;
+    width: 25rem;
+    height: 25rem;
+    padding: 2.5rem;
+
+    position: absolute;
+    margin-top: 2.5rem;
+    margin-left: 10rem;
+}
+.form-control.is-invalid{
+    outline: none;
+    border-color: none;
+}
+h2{
+    font-family: 'Rubik', sans-serif;
+    text-align: center;
+}
+label{
+    margin-bottom: 0.3rem;
+    font-family: 'Lato', sans-serif;
+}
+.mT{ margin-top: 5rem;}
+.mL{ margin-left: 20rem;}
+input{
+   outline: none;
+   border-width: 0 0 2px;
+   border-color: lightseagreen;
+   border-radius: 0;
+   
+}
+.form-group{
+    margin-bottom: 1.5rem;
+    
+}
+input:focus{
+    outline: none;
+}
+.btn{
+    margin-top: 1rem;
+    position: static;
+}
+p{
+    text-align: center;
+    color: lightcoral;
+}
+a{
+    text-decoration: none;
+    vertical-align: middle;
+    text-align: end;
+    color: gray;
+    font-size: small;
+}
+a:hover{
+    color: lightcoral;
+}
